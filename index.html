@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💕</title>
+    <style>
+        body {
+            background-color: #f8e4e9;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ac0404;
+            font-size: 50px;
+            text-shadow: 2px 2px 5px rgb(253, 117, 117);
+        }
+        .heart-img {
+            width: 200px;
+            margin-top: 20px;
+        }
+        .message {
+            font-size: 24px;
+            color: #ff3366;
+            margin: 20px;
+        }
+        .btn-container {
+            margin-top: 30px;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .yes {
+            background-color: #bd1717;
+            color: white;
+        }
+        .no {
+            background-color: #121111;
+            color: white;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        .hidden {
+            display: none;
+        }
+        .cute-img {
+            width: 150px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will You Be My Valentine? ❤️</h1>
+        <img src="Heart Love GIF by Kibbi.gif" class="heart-img" alt="Heart Animation">
+
+        <div class="btn-container">
+            <button class="btn yes" onclick="showLove()">YES! 💘</button>
+            <button class="btn no" onclick="moveNo()">No 😢</button>
+        </div>
+
+        <div id="loveMessage" class="hidden">
+            <p class="message">Yay! I knew you’d say yes! 💕💃</p>
+            <img src="https://media.tenor.com/kvlWjoRZJmQAAAAC/cute-love.gif" class="cute-img" alt="Cute Love">
+        </div>
+    </div>
+
+    <script>
+        function showLove() {
+            document.getElementById("loveMessage").classList.remove("hidden");
+        }
+
+        function moveNo() {
+            let noBtn = document.querySelector(".no");
+            noBtn.style.position = "absolute";
+            noBtn.style.top = Math.random() * window.innerHeight + "px";
+            noBtn.style.left = Math.random() * window.innerWidth + "px";
+        }
+    </script>
+
+</body>
+</html>
